@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir (‘maven-adderapp’) {
-                    ssh 'mvn -DskipTests clean package'
+                    sh 'mvn -DskipTests clean package'
                 }
             }
         }
